@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numserie: 0001
+  tamrueda: 1
+  desc: MyText1
+  category: one
+
+two:
+  numserie: 0002
+  tamrueda: 2
+  desc: MyText2
+  category: two
