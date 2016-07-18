@@ -13,4 +13,9 @@ class InventoryTest < ActiveSupport::TestCase
   	duplicate_numserie = @inventory.dup
     assert_not duplicate_numserie.valid?
   end
+
+  test "tamrueda must be greater than cero" do
+  	@inventory.tamrueda = 0
+    assert_not @inventory.valid?
+  end
 end
