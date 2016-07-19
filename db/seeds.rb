@@ -8,6 +8,13 @@
 
 Work.destroy_all
 User.destroy_all
+Inventory.destroy_all
+Category.destroy_all
+
+c = []
+3.times do |i|
+	c << Category.create(name: "Categoria" + i.to_s)
+end
 
 u = []
 2.times do |i|
@@ -17,4 +24,9 @@ end
 w = []
 6.times do |i|
 	w << Work.create(desc: "Descripcion" + i.to_s, user: u.sample)
+end
+
+i = []
+6.times do |j|
+	i << Inventory.create(numserie: "Num" + j.to_s, tamrueda: j, desc: "Descripcion " + j.to_s, category: c.sample, work: w.sample)
 end

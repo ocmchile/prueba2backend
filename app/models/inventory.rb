@@ -4,4 +4,6 @@ class Inventory < ActiveRecord::Base
   validates :numserie, presence: true
   validates :tamrueda, numericality: {greater_than: 0}
   validates_uniqueness_of :numserie
+
+  scope :tamaniox, ->(x){where("tamrueda = ?", x)}
 end
