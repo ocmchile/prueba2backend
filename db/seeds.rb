@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Work.destroy_all
+User.destroy_all
+
+u = []
+2.times do |i|
+	u << User.create(name: "Usuario" + i.to_s, email: "Email@" + i.to_s)
+end
+
+w = []
+6.times do |i|
+	w << Work.create(desc: "Descripcion" + i.to_s, user: u.sample)
+end
